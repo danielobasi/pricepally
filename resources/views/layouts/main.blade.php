@@ -18,22 +18,22 @@
 <body>
 <main>
 
-    @include('components.sections.header_section')
+    @include('includes.sections.header_section')
 
-    @include('components.sections.hero_section')
+    @include('includes.sections.hero_section')
 
 
 
-    @include('components.sections.categories_section')
+    @include('includes.sections.categories_section')
     @yield('content')
 
 
 
 
-    @include('components.sections.footer_section')
-    @include('components.modals.pre_order_modal')
-   @include('components.modals.filter_modal')
-   @include('components.loaders.mobile_loader')
+    @include('includes.sections.footer_section')
+    @include('includes.modals.pre_order_modal')
+   @include('includes.modals.filter_modal')
+   @include('includes.loaders.mobile_loader')
     <!------ MOBILE-FOOTER-CSS-START ------>
     <footer class="d-block d-lg-none mobile-footer">
         <div class="container">

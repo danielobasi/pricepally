@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('category_id')->constrained('categories')->cascadeOnUpdate()->restrictOnDelete();
             $table->string('title');
+            $table->string('slug')->unique()->comment('Unique subcategory slug for clean url and better SEO');
             $table->timestamps();
 
         });

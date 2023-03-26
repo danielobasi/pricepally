@@ -24,18 +24,19 @@
                     <form class="form-inline select-bg float-right">
                         <div class="form-group mb-0">
                             <select class="form-control border-right-0">
-                                <option>Categories</option>
-                                <option>Soup & stew ingredients</option>
-                                <option>Foodstuffs</option>
-                                <option>Meat, Poultry & Seafood</option>
+                                <option disabled selected>Categories</option>
+                                @foreach($categories as $category)
+                                    <option>{{$category->title}}</option>
+                                @endforeach
+
                             </select>
                         </div>
                         <div class="form-group mb-0">
                             <select class="form-control  border-right-0">
-                                <option>Sub Categories</option>
-                                <option>Grains</option>
-                                <option>Tubers & Roots
-                                </option>
+                                <option disabled selected>Sub Categories</option>
+                                @foreach($subCategories as $subCategory)
+                                <option>{{$subCategory->title}}</option>
+                                @endforeach
                             </select>
                         </div>
                         <div class="form-group mb-0">
@@ -2951,8 +2952,8 @@
         </section>
     </div>
     <!------ FOOD-ITEMS-MOBILE-SECTION-START ------>
-    @include('components.sections.partners_section')
+    @include('includes.sections.partners_section')
 
-    @include('components.sections.download_app_section')
+    @include('includes.sections.download_app_section')
 @endsection
 

@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('imageUrl');
+            $table->string('image_url');
             $table->string('slug')->unique()->comment('Unique category slug for clean url and better SEO');
             $table->timestamps();
         });
