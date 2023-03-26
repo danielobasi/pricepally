@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\DealPurchase;
+use App\Models\RecommendationOrder;
 use Illuminate\Http\Request;
 
-class DealPurchaseController extends Controller
+class RecommendationOrderController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +34,7 @@ class DealPurchaseController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(DealPurchase $dealPurchase)
+    public function show(RecommendationOrder $recommendationOrder)
     {
         //
     }
@@ -42,7 +42,7 @@ class DealPurchaseController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(DealPurchase $dealPurchase)
+    public function edit(RecommendationOrder $recommendationOrder)
     {
         //
     }
@@ -50,7 +50,7 @@ class DealPurchaseController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, DealPurchase $dealPurchase)
+    public function update(Request $request, RecommendationOrder $recommendationOrder)
     {
         //
     }
@@ -58,7 +58,7 @@ class DealPurchaseController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(DealPurchase $dealPurchase)
+    public function destroy(RecommendationOrder $recommendationOrder)
     {
         //
     }
