@@ -13,7 +13,12 @@ return new class extends Migration
     {
         Schema::create('product_ratings', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('product_id')->constrained('products')->cascadeOnUpdate()->cascadeOnDelete();
+            $table->foreignId('user_id')->constrained('users')->cascadeOnUpdate()->cascadeOnDelete();
+            $table->enum('stars',array(1,2,3,4,5));
+            $table->string('review')->nullable();
             $table->timestamps();
+
         });
     }
 

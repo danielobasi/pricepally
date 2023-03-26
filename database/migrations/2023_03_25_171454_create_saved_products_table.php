@@ -13,7 +13,10 @@ return new class extends Migration
     {
         Schema::create('saved_products', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained()->cascadeOnUpdate()->restrictOnDelete();
+            $table->foreignId('product_id')->constrained()->cascadeOnUpdate()->cascadeOnDelete();
             $table->timestamps();
+
         });
     }
 

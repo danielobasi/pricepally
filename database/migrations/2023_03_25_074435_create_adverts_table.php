@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('adverts', function (Blueprint $table) {
             $table->id();
+            $table->string('description')->nullable();
+            $table->string('promo_image_url');
+            $table->string('action_link')->comment('Call to action link when Ad is clicked');
+            $table->enum('status',array('inactive','active'))->default('active');
             $table->timestamps();
         });
     }

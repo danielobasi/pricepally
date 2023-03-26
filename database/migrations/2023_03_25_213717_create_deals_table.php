@@ -11,10 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('shopping_lists', function (Blueprint $table) {
+        Schema::create('deals', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained('users')->cascadeOnUpdate()->cascadeOnDelete();
-            $table->text('content');
             $table->timestamps();
         });
     }
@@ -24,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('shopping_lists');
+        Schema::dropIfExists('deals');
     }
 };
