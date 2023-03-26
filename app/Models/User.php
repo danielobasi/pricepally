@@ -5,6 +5,7 @@ namespace App\Models;
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
@@ -45,8 +46,11 @@ class User extends Authenticatable
     public function savedProducts():HasMany {
         return  $this->HasMany(SavedProduct::class,'user_id');
     }
-    public function addresses():HasMany {
-        return  $this->HasMany(UserAddress::class,'user_id');
+//    public function addresses():HasMany {
+//        return  $this->HasMany(UserAddress::class,'user_id');
+//    }
+    public function address():HasOne{
+        return  $this->HasOne(UserAddress::class,'user_id');
     }
     public function referrals():HasMany {
         return  $this->HasMany(UserReferral::class,'user_id');
