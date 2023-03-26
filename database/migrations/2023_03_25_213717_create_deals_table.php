@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('deals', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('product_id')->constrained('products')->cascadeOnUpdate()->cascadeOnDelete();
+            $table->dateTime('expire_time');
+            $table->integer('initial_slots')->unsigned();
+            $table->integer('available_slots')->unsigned();
             $table->timestamps();
         });
     }

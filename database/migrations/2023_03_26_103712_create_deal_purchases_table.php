@@ -11,12 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('recommended_products', function (Blueprint $table) {
+        Schema::create('deal_purchases', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('product_id')->constrained('products')->cascadeOnUpdate()->cascadeOnDelete();
-            $table->integer('initial_quantity')->unsigned();
-            $table->integer('available_quantity')->unsigned();
-            $table->integer('delivery_days')->unsigned();
+            $table->foreignId('deal_id')->constrained('deals')->cascadeOnUpdate()->restrictOnDelete();
+            $table->foreignId('user_id')->constrained('users')->cascadeOnUpdate()->restrictOnDelete();
             $table->timestamps();
         });
     }
@@ -26,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('recommended_products');
+        Schema::dropIfExists('deal_purchases');
     }
 };
