@@ -68,5 +68,16 @@ class ProductSeeder extends Seeder
             'cover_image_url' => 'assets/images/Product-img6.png',
             'created_at' => now(),
         ]);
+        DB::table('products')->insert([
+            'category_id' => 1,
+            'sub_category_id' => 2,
+            'name' => 'Strawberries',
+            'price' => 50000,
+            'previous_price' => 78000,
+            'slug' => 'strawberries',
+            'season' => 'in',
+            'cover_image_url' => 'assets/images/Pre-order1.png',
+            'created_at' => now(),
+        ]);
     }
 }

@@ -185,42 +185,6 @@
 
                                                     @endif
 
-                                                    <!-- <div class="rating-main pro-detail-star" data-vote="0">
-                                                            <div class="mainstar hidden">
-                                                                <span class="full" data-value="0"></span>
-                                                                <span class="half" data-value="0"></span>
-                                                            </div>
-                                                            <div class="star">
-                                                                <span class="full" data-value="1"></span>
-                                                                <span class="half" data-value="0.5"></span>
-                                                                <span class="selected"></span>
-
-                                                            </div>
-                                                            <div class="star">
-                                                                <span class="full" data-value="2"></span>
-                                                                <span class="half" data-value="1.5"></span>
-                                                                <span class="selected"></span>
-
-                                                            </div>
-
-                                                            <div class="star">
-                                                                <span class="full" data-value="3"></span>
-                                                                <span class="half" data-value="2.5"></span>
-                                                                <span class="selected"></span>
-                                                            </div>
-
-                                                            <div class="star">
-                                                                <span class="full" data-value="4"></span>
-                                                                <span class="half" data-value="3.5"></span>
-                                                                <span class="selected"></span>
-                                                            </div>
-
-                                                            <div class="star">
-                                                                <span class="full" data-value="5"></span>
-                                                                <span class="half" data-value="4.5"></span>
-                                                                <span class="selected"></span>
-                                                            </div>
-                                                        </div> -->
                                                     <div class='success-box'>
                                                         @if(!$pallyItem->ratings->isEmpty())
                                                         <div class='text-message'> ({{$pallyItem->rating()}}/5.0)</div>
@@ -247,6 +211,7 @@
                             <h6 class="inner-head mb-3 mt-3">3 Available Deals</h6>
                             <div class="">
                                 <div class="row">
+                                    @foreach($recommendedItems as $recommendedItem)
                                     <div class="col-md-6 col-lg-3">
                                         <div class="pally-inner">
                                             <div class="products-img-wrapper  mb-3 pointer">
@@ -256,24 +221,24 @@
                                                                 favorite_border
                                                             </span>
                                                     </div>
-                                                    <img class="mb-3 product-img" src="assets/images/Pre-order1.png"
+                                                    <img class="mb-3 product-img" src="{{asset($recommendedItem->product->cover_image_url)}}"
                                                          alt="Pre-order1">
                                                 </a>
                                             </div>
 
                                             <div class="pally-content">
                                                 <a href="#" class="inner-head">
-                                                    <h5 class="mb-2">Strawberries</h5>
+                                                    <h5 class="mb-2">{{$recommendedItem->product->name}}</h5>
                                                 </a>
                                                 <a href="#" class="red-bg"><span class="material-icons-outlined">
                                                             arrow_right_alt
                                                         </span>9% | In Season</a>
-                                                <h6 class="mb-2 mt-2 font-weight-bold simhead">₦7,500 per kg</h6>
-                                                <p class="text-red mb-2">1kg of 50kg left</p>
+                                                <h6 class="mb-2 mt-2 font-weight-bold simhead">₦ {{number_format($recommendedItem->product->price/$recommendedItem->initial_quantity)}} per {{$recommendedItem->unit}}</h6>
+                                                <p class="text-red mb-2">{{$recommendedItem->available_quantity}}{{$recommendedItem->unit}} of {{$recommendedItem->initial_quantity}}{{$recommendedItem->unit}} left</p>
                                                 <div class="preorder-progress stat-bar mb-2">
                                                     <span class="stat-bar-rating" role="stat-bar" style="width: 80%;">80%</span>
                                                 </div>
-                                                <p class="mb-2 dgrey-clr">Delivery Date: July 23rd 2021</p>
+                                                <p class="mb-2 dgrey-clr">Delivery Date: {{now()->addDays($recommendedItem->delivery_days)->toDayDateTimeString()}} </p>
                                                 <a href="#">
                                                     <button type="button" class="brown-btn  text-uppercase btn-effects "
                                                             data-toggle="modal" data-target="#preorderModal">Book
@@ -284,79 +249,8 @@
 
                                         </div>
                                     </div>
-                                    <div class="col-md-6 col-lg-3">
-                                        <div class="pally-inner">
-                                            <div class="products-img-wrapper  mb-3 pointer">
-                                                <a href="#">
-                                                    <div class="heart-icon">
-                                                            <span class="material-icons">
-                                                                favorite_border
-                                                            </span>
-                                                    </div>
-                                                    <img class="mb-3 product-img" src="assets/images/Pre-order2.png"
-                                                         alt="Pre-order2">
-                                                </a>
-                                            </div>
-                                            <div class="pally-content">
-                                                <a href="#" class="inner-head">
-                                                    <h5 class="mb-2">Strawberries</h5>
-                                                </a>
-                                                <a href="#" class="red-bg"><span class="material-icons-outlined">
-                                                            arrow_right_alt
-                                                        </span>9% | In Season</a>
-                                                <h6 class="mb-2 mt-2 font-weight-bold simhead">₦7,500 per kg</h6>
-                                                <p class="text-red mb-2">1kg of 50kg left</p>
-                                                <div class="preorder-progress stat-bar mb-2">
-                                                    <span class="stat-bar-rating" role="stat-bar" style="width: 30%;">30%</span>
-                                                </div>
-                                                <p class="mb-2 dgrey-clr">Delivery Date: July 23rd 2021</p>
-                                                <a href="#">
-                                                    <button type="button"
-                                                            class="brown-btn  text-uppercase btn-effects ">Book
-                                                        Now
-                                                    </button>
-                                                </a>
-                                            </div>
+                                    @endforeach
 
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-lg-3 ">
-                                        <div class="pally-inner">
-                                            <div class="products-img-wrapper  mb-3 pointer">
-                                                <a href="#">
-                                                    <div class="heart-icon">
-                                                            <span class="material-icons">
-                                                                favorite_border
-                                                            </span>
-                                                    </div>
-                                                    <img class="mb-3 product-img" src="assets/images/Pre-order3.png"
-                                                         alt="Product-img3">
-                                                </a>
-                                            </div>
-                                            <div class="pally-content">
-                                                <a href="#" class="inner-head">
-                                                    <h5 class="mb-2">Strawberries</h5>
-                                                </a>
-                                                <a href="#" class="red-bg"><span class="material-icons-outlined">
-                                                            arrow_right_alt
-                                                        </span>9% | In Season</a>
-                                                <h6 class="mb-2 mt-2
-                                                     font-weight-bold simhead">₦7,500 per kg</h6>
-                                                <p class="text-red mb-2 text-uppercase">Closed</p>
-                                                <div class="preorder-progress stat-bar mb-2">
-                                                    <span class="stat-bar-rating" role="stat-bar" style="width: 100%;">100%</span>
-                                                </div>
-                                                <p class="mb-2 dgrey-clr">Delivery Date: July 23rd 2021</p>
-                                                <a href="#" class="closed-opacity">
-                                                    <button type="button"
-                                                            class="brown-btn  text-uppercase btn-effects ">Book
-                                                        Now
-                                                    </button>
-                                                </a>
-                                            </div>
-
-                                        </div>
-                                    </div>
 
                                 </div>
                             </div>

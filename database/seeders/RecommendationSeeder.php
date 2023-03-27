@@ -15,7 +15,7 @@ class RecommendationSeeder extends Seeder
     public function run(): void
     {
         DB::table('recommended_products')->insert([
-            'product_id' => 1,
+            'product_id' => 6,
             'initial_quantity' => 5,
             'available_quantity' => 3,
             'delivery_days' => 14,
@@ -23,7 +23,7 @@ class RecommendationSeeder extends Seeder
             'created_at' => now(),
         ]);
         DB::table('recommended_products')->insert([
-            'product_id' => 2,
+            'product_id' => 6,
             'initial_quantity' => 5,
             'available_quantity' => 3,
             'delivery_days' => 14,
