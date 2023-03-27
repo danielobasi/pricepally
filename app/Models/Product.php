@@ -21,4 +21,7 @@ class Product extends Model
     public function ratings():HasMany {
         return  $this->hasMany(ProductRating::class,'product_id');
     }
+    public function rating(){
+        return ProductRating::where('product_id',$this->id)->avg('stars');
+    }
 }

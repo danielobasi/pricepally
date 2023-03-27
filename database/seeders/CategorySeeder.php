@@ -20,18 +20,21 @@ class CategorySeeder extends Seeder
             'title' => 'Food Stuff',
             'image_url' => 'assets/images/foodstuff-img.png',
             'slug' => 'food-stuff',
+            'created_at' => now(),
         ]);
         DB::table('categories')->insert([
             'id' => 2,
             'title' => 'Packaged Food',
             'image_url' => 'assets/images/packfood_img.png',
             'slug' => 'packaged-food',
+            'created_at' => now(),
         ]);
         DB::table('categories')->insert([
             'id' => 3,
             'title' => 'Fruits and nuts',
             'image_url' => 'assets/images/fruits-img.png',
             'slug' => 'fruits-and-nuts',
+            'created_at' => now(),
         ]);
     }
 }

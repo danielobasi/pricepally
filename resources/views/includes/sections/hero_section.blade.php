@@ -34,21 +34,12 @@
                         <li data-target="#hero-sliderSlidesOnly" data-slide-to="4"></li>
                     </ol>
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img class="d-block w-100" src="assets/images/slider1.jpg" alt="slider1.jpg">
+                        @foreach($adverts as $advert)
+                        <div @if($loop->first) class="carousel-item active" @else class="carousel-item" @endif>
+                            <img class="d-block w-100" src="{{asset($advert->promo_image_url)}}" alt="slider1.jpg">
                         </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="assets/images/slider2.jpg" alt="slider2.jpg">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="assets/images/slider1.jpg" alt="slider1.jpg">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="assets/images/slider2.jpg" alt="slider2.jpg">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="assets/images/slider1.jpg" alt="slider1.jpg">
-                        </div>
+                        @endforeach
+
                     </div>
                 </div>
                 <!-- <div id="hero-sliderSlidesOnly" class="carousel slide home_slider" data-ride="carousel">

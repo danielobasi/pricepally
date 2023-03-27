@@ -23,11 +23,8 @@
     @include('includes.sections.hero_section')
 
 
-
     @include('includes.sections.categories_section')
     @yield('content')
-
-
 
 
     @include('includes.sections.footer_section')

@@ -17,6 +17,7 @@ return new class extends Migration
             $table->integer('initial_quantity')->unsigned();
             $table->integer('available_quantity')->unsigned();
             $table->integer('delivery_days')->unsigned();
+            $table->string('unit')->comment('Measuring unit of product');
             $table->timestamps();
         });
     }

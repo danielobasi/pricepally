@@ -22,6 +22,7 @@ class ProductSeeder extends Seeder
             'slug' => 'irish-potato',
             'season' => 'off',
             'cover_image_url' => 'assets/images/Product-img9.png',
+            'created_at' => now(),
         ]);
         DB::table('products')->insert([
             'category_id' => 1,
@@ -32,6 +33,7 @@ class ProductSeeder extends Seeder
             'slug' => 'soya-bean-100kg',
             'season' => 'in',
             'cover_image_url' => 'assets/images/Product-img6.png',
+            'created_at' => now(),
         ]);
         DB::table('products')->insert([
             'category_id' => 1,
@@ -42,6 +44,7 @@ class ProductSeeder extends Seeder
             'slug' => 'white-onions-40kg',
             'season' => 'in',
             'cover_image_url' => 'assets/images/Product-img3.png',
+            'created_at' => now(),
         ]);
         DB::table('products')->insert([
             'category_id' => 1,
@@ -52,6 +55,7 @@ class ProductSeeder extends Seeder
             'slug' => 'guinea-corn-red',
             'season' => 'in',
             'cover_image_url' => 'assets/images/Product-img4.png',
+            'created_at' => now(),
         ]);
         DB::table('products')->insert([
             'category_id' => 1,
@@ -62,6 +66,7 @@ class ProductSeeder extends Seeder
             'slug' => 'soya-bean-paint-bucket',
             'season' => 'in',
             'cover_image_url' => 'assets/images/Product-img6.png',
+            'created_at' => now(),
         ]);
     }
 }

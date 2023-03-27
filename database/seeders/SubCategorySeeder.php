@@ -17,11 +17,13 @@ class SubCategorySeeder extends Seeder
             'category_id' => 1,
             'title' => 'Grain',
             'slug' => 'grain',
+            'created_at' => now(),
         ]);
         DB::table('sub_categories')->insert([
             'category_id' => 1,
             'title' => 'Tuber and Roots',
             'slug' => 'tuber-and-roots',
+            'created_at' => now(),
         ]);
     }
 }

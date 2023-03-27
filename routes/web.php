@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/',[PagesController::class,'index'])->name('index');
+Route::get('/search',[PagesController::class,'search'])->name('search');
