@@ -12,7 +12,7 @@
     <link rel='stylesheet' href="{{asset('assets/css/owl.carousel.min.css')}}">
     <link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
     <link href="{{asset('assets/fonts/font-awesome.min.css')}}" rel="stylesheet" media="all">
-
+    <livewire:styles />
 </head>
 
 <body>
@@ -331,6 +331,7 @@
     })
 
 </script>
+<livewire:scripts />
 
 </body>
 

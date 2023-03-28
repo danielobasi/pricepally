@@ -58,13 +58,7 @@
                         @livewire('pally-items')
                         @livewire('recommended-items')
                     </div>
-                    <div class="load-bg text-center mb-5 d-none d-lg-block">
-                        <a href="#">
-                            <button typ="button" class="load-more text-uppercase ">
-                                Load more items
-                            </button>
-                        </a>
-                    </div>
+
                 </div>
             </div>
 
@@ -1245,13 +1239,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="load-bg text-center mb-5 d-none d-lg-block">
-                                <a href="#">
-                                    <button typ="button" class="load-more text-uppercase ">
-                                        Load more items
-                                    </button>
-                                </a>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -1263,5 +1251,7 @@
     @include('includes.sections.partners_section')
 
     @include('includes.sections.download_app_section')
+
 @endsection
+
 

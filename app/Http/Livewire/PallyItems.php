@@ -9,6 +9,10 @@ use Livewire\Component;
 class PallyItems extends Component
 {
     public int $perPage = 5;
+
+    public function load(){
+        $this->perPage += 5;
+    }
     public function render():View
     {
         return view('livewire.pally-items',[

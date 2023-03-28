@@ -46,4 +46,11 @@
 
         </div>
     </div>
+    @if($recommendedItems->total() > 1 && $recommendedItems->count() < $recommendedItems->total())
+    <div class="load-bg text-center mb-5 d-none d-lg-block">
+        <button wire:click="load" type="button" class="load-more text-uppercase ">
+            Load more items
+        </button>
+    </div>
+    @endif
 </div>

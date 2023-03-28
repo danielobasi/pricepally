@@ -9,6 +9,9 @@ use Livewire\Component;
 class RecommendedItems extends Component
 {
     public int $perPage = 5;
+    public function load(){
+        $this->perPage += 5;
+    }
     public function render():View
     {
         return view('livewire.recommended-items',[

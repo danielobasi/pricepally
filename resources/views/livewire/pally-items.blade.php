@@ -93,4 +93,11 @@
 
         </div>
     </div>
+    @if($pallyItems->total() > 1 && $pallyItems->count() < $pallyItems->total())
+    <div class="load-bg text-center mb-5 d-none d-lg-block">
+        <button wire:click="load" type="button" class="load-more text-uppercase ">
+            Load more items
+        </button>
+    </div>
+    @endif
 </div>
