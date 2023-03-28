@@ -17,7 +17,8 @@ class PagesController extends Controller
 
         return view('pages.index',$data);
     }
-    public function search():View {
+    public function search(Request $request):View {
+
 
     }
 }

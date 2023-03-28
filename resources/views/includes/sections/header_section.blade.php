@@ -7,63 +7,12 @@
                     <div class="col-4 col-sm-5 col-md-5">
                         <ul class="list-unstyled mb-0">
                             <li class="d-inline-block">
-                                <a class="navbar-brand" href="index.html" target="_blank">
+                                <a class="navbar-brand" href="#" target="_blank">
                                     <embed src="assets/images/logo.svg" width="40px">
                                 </a>
                             </li>
                             <li class="d-inline-block">
-                                <div class="search-container">
-                                    <form>
-                                        <div class="outer_search">
-                                            <div class="saerch-bar"  id="search_bars">
-                                                        <span class="material-icons">
-                                                                search
-                                                                </span>
-                                                <input type="text" placeholder="Search Food Items or Users" name="search">
-                                            </div>
-                                            <button class="yellow-bg">SEARCH</button>
-                                        </div>
-                                        <div class="search-dropdown"  id="scrolling">
-                                            <div class="search-items">
-                                                <h6 class="grey-text">FOOD ITEMS</h6>
-                                                <ul class="list-unstyled mb-3">
-                                                    <li class="d-inline-block"><img class="seaarch-img" src="assets/images/search-img1.jpg" alt="search-img1">
-                                                    </li>
-                                                    <li class="d-inline-block">
-                                                        <h5>Tuwo Rice (25kg)</h5>
-                                                    </li>
-                                                </ul>
-                                                <ul class="list-unstyled mb-3">
-                                                    <li class="d-inline-block"><img class="seaarch-img" src="assets/images/search-img2.jpg" alt="search-img1">
-                                                    </li>
-                                                    <li class="d-inline-block">
-                                                        <h5>Tuwo Rice (50kg)</h5>
-                                                    </li>
-                                                </ul>
-                                                <ul class="list-unstyled mb-3">
-                                                    <li class="d-inline-block"><img class="seaarch-img" src="assets/images/search-img1.jpg" alt="search-img1">
-                                                    </li>
-                                                    <li class="d-inline-block">
-                                                        <h5>Tuwo Rice (25kg)</h5>
-                                                    </li>
-                                                </ul>
-
-                                            </div>
-                                            <div class="search-users">
-                                                <h6 class="grey-text">Users</h6>
-
-                                                <ul class="list-unstyled mb-3">
-                                                    <li class="d-inline-block"><img class="seaarch-list" src="assets/images/list-img1.jpg" alt="search-img1">
-                                                    </li>
-                                                    <li class="d-inline-block">
-                                                        <h5>Tumininu Tayo</h5>
-                                                    </li>
-                                                </ul>
-
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
+                                @livewire('search')
                             </li>
                         </ul>
                     </div>
