@@ -1,5 +1,10 @@
 @extends('layouts.main')
 @section('content')
+    <script src="{{ asset('assets/js/dealCountdownTimer.js')}}"></script>
+{{--    @push('head')--}}
+{{--        <!-- Scripts -->--}}
+{{--        <script src="{{ asset('assets/js/countdown.js')}}"></script>--}}
+{{--    @endpush--}}
     <!------ FOOD-ITEMS-WEB-VIEW-SECTION-START ------>
     <section class="food-items-bg  d-none d-lg-block webfoodTab-view">
         <div class="container">
@@ -61,7 +66,7 @@
                                     <div class="col-md-6 col-lg-3">
                                         <div class="pally-inner ">
                                             <div class="products-img-wrapper  mb-3 pointer">
-                                                <a href="product_detail.html">
+                                                <a href="$">
                                                     <div class="heart-icon">
                                                             <span class="material-icons">
                                                                 favorite_border
@@ -81,7 +86,7 @@
                                                         </span>9% | <span class="clr-gr">{{$deal->product->season}} Season</span></a>
                                                 <h5 class="mb-2 mt-2 font-weight-bold simhead">₦{{number_format($deal->product->price / $deal->initial_slots)}} <small>per
                                                         slot (slot size per person goes here)</small></h5>
-                                                <h6 class="mb-2">Time left: 68:50:52</h6>
+                                                <h6 class="mb-2" id="countdown{{$deal->id}}">Time left: 68:50:52</h6>
                                                 <ul class="list-unstyled pallylist-bg mb-2">
                                                     @foreach($deal->dealOrders as $dealOrder)
                                                     <li class="d-inline-block pally-left">
@@ -101,10 +106,20 @@
                                                         SLOT
                                                     </button>
                                                 </a>
+
                                             </div>
 
                                         </div>
                                     </div>
+
+                                    <script>
+                                        const timer{{$deal->id}} = new DealCountdownTimer({
+                                            id:"countdown{{$deal->id}}",
+                                            targetDate: new Date("September, 21 2023 18:00:00"),
+                                        });
+
+                                        timer{{$deal->id}}.startTimer();
+                                    </script>
                                     @endforeach
 
                                 </div>

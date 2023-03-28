@@ -3,9 +3,10 @@
 
 A task on pricepally
 
-## Author
+## Run Project
+ 
+I have created seed for test data, do an artisan migrate command and then a seed command
 
-- <a href="https://github.com/danielobasi" style="color:green;">Daniel Obasi </a>
 
 
 
