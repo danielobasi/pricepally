@@ -22,7 +22,7 @@ class DealCountdownTimer {
     }
 
     updateTimer({days,  hours, mins, secs }) {
-        document.getElementById(this.id).innerHTML = `${hours}:${mins}:${secs}`;
+        document.getElementById(this.id).innerHTML = `${days}:${hours}:${mins}:${secs}`;
     }
 
 

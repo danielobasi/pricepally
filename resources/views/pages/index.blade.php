@@ -115,7 +115,8 @@
                                     <script>
                                         const timer{{$deal->id}} = new DealCountdownTimer({
                                             id:"countdown{{$deal->id}}",
-                                            targetDate: new Date("September, 21 2023 18:00:00"),
+                                            //targetDate: new Date("September, 21 2023 18:00:00"),
+                                            targetDate: new Date("{{$deal->expire_time}}"),
                                         });
 
                                         timer{{$deal->id}}.startTimer();
