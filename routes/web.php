@@ -20,8 +20,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[PagesController::class,'index'])->name('index');
 Route::get('/search',[PagesController::class,'search'])->name('search');
 
-Route::get('/deals',Deals::class);
-Route::get('/pally-items',PallyItems::class);
-Route::get('/recommended-items',RecommendedItems::class);
+
 
 

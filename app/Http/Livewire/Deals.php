@@ -9,9 +9,9 @@ use Livewire\Component;
 
 class Deals extends Component
 {
-    public int $perPage = 5;
+    public int $perPage = 4;
     public function load(){
-        $this->perPage += 5;
+        $this->perPage += 4;
 
     }
     public function mount(){

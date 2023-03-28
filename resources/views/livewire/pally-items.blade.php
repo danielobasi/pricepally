@@ -1,5 +1,4 @@
-<div class="tab-pane fade recommended-bg" id="recommended" role="tabpanel"
-     aria-labelledby="recommended-tab">
+<div>
     <h6 class="inner-head mb-3 mt-3">{{$pallyItems->total()}} Available Deals</h6>
     <div class="">
         <div class="row">
@@ -94,10 +93,13 @@
         </div>
     </div>
     @if($pallyItems->total() > 1 && $pallyItems->count() < $pallyItems->total())
-    <div class="load-bg text-center mb-5 d-none d-lg-block">
-        <button wire:click="load" type="button" class="load-more text-uppercase ">
-            Load more items
-        </button>
-    </div>
+        <div class="load-bg text-center mb-5 d-none d-lg-block">
+            <button wire:click="load" type="button" class="load-more text-uppercase ">
+                Load more items
+            </button>
+        </div>
     @endif
+
 </div>
+
+

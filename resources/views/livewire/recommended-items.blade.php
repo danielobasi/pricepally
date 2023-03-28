@@ -1,5 +1,4 @@
-<div class="tab-pane fade preorder-bg" id="pre-orders" role="tabpanel"
-     aria-labelledby="pre-orders-tab">
+<div >
     <h6 class="inner-head mb-3 mt-3">{{$recommendedItems->total()}} Available Deals</h6>
     <div class="">
         <div class="row">

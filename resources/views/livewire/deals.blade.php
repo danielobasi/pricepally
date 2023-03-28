@@ -1,4 +1,4 @@
-<div class="tab-pane fade show active " id="pally" role="tabpanel" aria-labelledby="pally-tab">
+<div>
     <h6 class="inner-head">{{$deals->total()}} Available Deals</h6>
     <div class="">
         <div class="row">

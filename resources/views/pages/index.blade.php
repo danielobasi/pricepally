@@ -54,9 +54,20 @@
             <div class="row ">
                 <div class="col-lg-12">
                     <div class="tab-content main" id="foodTabContent">
-                        @livewire('deals')
-                        @livewire('pally-items')
-                        @livewire('recommended-items')
+                        <div class="tab-pane fade show active " id="pally" role="tabpanel" aria-labelledby="pally-tab">
+                            @livewire('deals')
+
+                        </div>
+                        <div class="tab-pane fade recommended-bg" id="recommended" role="tabpanel"
+                             aria-labelledby="recommended-tab">
+                            @livewire('pally-items')
+                        </div>
+                        <div class="tab-pane fade preorder-bg" id="pre-orders" role="tabpanel"
+                             aria-labelledby="pre-orders-tab">
+                            @livewire('recommended-items')
+                        </div>
+
+
                     </div>
 
                 </div>
